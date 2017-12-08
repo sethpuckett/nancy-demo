@@ -1,0 +1,13 @@
+<h1>User List</h1>
+
+<table>
+  <th>ID</th>
+  <th>Username</th>
+  <th>Admin?</th>
+  @Each
+    <tr>
+      <td>@Current.Id</td>
+      <td>@Current.Username</td>
+      <td><input type="checkbox" @If.Admin checked @EndIf /></td>
+  @EndEach
+</table>
