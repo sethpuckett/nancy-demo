@@ -17,6 +17,7 @@ namespace nancy_demo.modules
 
       Get("/", _ => View["index"]);
       Get("/users", _ => View["users", users]);
+      Get("/file", _ => Response.AsFile("content/big_file.zip"));
     }
   }
 }
